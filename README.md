@@ -21,5 +21,5 @@ App is a NextJS application. It will now only contain the components that are ac
 
 ## Credits
 
-A bit thanks to Lukas Bomach  
+A big thanks to Lukas Bomach  
 This project is heavily inspired by his [article](https://dev.to/lukasbombach/how-to-write-a-tree-shakable-component-library-4ied) and [demonstration repo](https://github.com/LukasBombach/tree-shakable-component-library). It's basically identical with the exception that I use JS instead of TS and esbuild instead of rollup.
