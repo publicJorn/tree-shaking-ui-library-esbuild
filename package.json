@@ -1,6 +1,6 @@
 {
   "name": "tree-shaking-ui-library-esbuild",
-  "description": "An example of a UI library built with esbuild that features tree-shaking",
+  "description": "A UI library built with esbuild that features tree-shaking",
   "version": "1.0.0",
   "author": {
     "name": "Jorn Luiten",
