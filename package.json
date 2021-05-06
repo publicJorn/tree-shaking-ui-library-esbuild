@@ -1,0 +1,17 @@
+{
+  "name": "tree-shaking-ui-library-esbuild",
+  "description": "An example of a UI library built with esbuild that features tree-shaking",
+  "version": "1.0.0",
+  "author": {
+    "name": "Jorn Luiten",
+    "url": "https://github.com/publicJorn"
+  },
+  "repository": {
+    "url": "https://github.com/publicJorn/tree-shaking-ui-library-esbuild"
+  },
+  "private": true,
+  "main": "index.js",
+  "workspaces": [
+    "packages/*"
+  ]
+}
