@@ -5,19 +5,59 @@ This is a yarn workspace with two packages
 - `ui-library` contains the design system/UI library
 - `app` is the application consuming the UI library
 
-## Get it to work
+## Set it up
 
-Go to the project root and type:
+Go to the project root and copy/paste this:
 
 ```shell
 yarn
-cd ui-library
+cd packages/ui-library
 yarn build
 cd ../app
 yarn build
 ```
 
-App is a NextJS application. It will now only contain the components that are actually imported.
+App is a NextJS application. The built app will now only contain the components that are actually imported (Button in this initial example).  
+You can check this by searching the `packages/app/.next` folder in an editor. Find `I SHOULD BE HERE` -> this is the `Button` that is imported.  
+Find `I MUST NOT BE HERE` -> this is the `Link` that is not imported.
+
+## Work with it
+
+Develop components with Storybook...
+
+```shell
+# from root dir:
+cd packages/ui-library
+yarn start
+```
+
+...and make ready for consumption in app with
+
+```shell
+# from packages/ui-library
+yarn build
+```
+
+In dev mode
+
+```shell
+# from root dir:
+cd packages/app
+yarn start
+```
+
+In prod mode
+
+```shell
+# from root dir:
+cd packages/app
+yarn build
+yarn serve
+```
+
+### Extending it further
+
+If you want to work with this and add a third part library to `ui-library`, be sure to add it as a `peerDependency` in `packages/ui-library/package.json` AND list it in the `external` array in `esbuild.js`. You then need to `yarn add` it to your `app` as well.
 
 ## Credits
 
