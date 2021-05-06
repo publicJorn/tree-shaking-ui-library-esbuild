@@ -5,6 +5,11 @@ This is a yarn workspace with two packages
 - `ui-library` contains the design system/UI library
 - `app` is the application consuming the UI library
 
+## The _explore_ branch
+
+Here I'll start adding stuff from [https://gitlab.com/commonground/core/design-system]() so I can learn what esbuild transforms are needed, etc.  
+The eventual goal is to replace the Commonground Design System (which is build with webpack) with this.
+
 ## Set it up
 
 Go to the project root and copy/paste this:
@@ -18,8 +23,8 @@ yarn build
 ```
 
 App is a NextJS application. The built app will now only contain the components that are actually imported (Button in this initial example).  
-You can check this by searching the `packages/app/.next` folder in an editor. Find `I SHOULD BE HERE` -> this is the `Button` that is imported.  
-Find `I MUST NOT BE HERE` -> this is the `Link` that is not imported.
+You can check this by searching the `packages/app/.next` folder in an editor. Find `I SHOULD BE IN APP` -> this is the `Button` that is imported.  
+Find `I MUST NOT BE IN APP` -> this is the `Link` that is not imported.
 
 ## Work with it
 

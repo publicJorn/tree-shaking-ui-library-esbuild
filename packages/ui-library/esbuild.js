@@ -2,12 +2,13 @@ const esbuild = require('esbuild')
 const pkg = require('./package.json')
 
 const options = {
-  entryPoints: ['components/index.js'],
+  entryPoints: ['src/index.js'],
   bundle: true,
   loader: {
     '.js': 'jsx',
   },
-  external: ['react', 'styled-components'],
+  inject: ['build/global-inject.js'],
+  external: ['react', 'prop-types', 'styled-components'],
 }
 
 const cjs = { format: 'cjs', outfile: pkg.main, ...options }

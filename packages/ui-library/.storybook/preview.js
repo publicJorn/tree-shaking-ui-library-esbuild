@@ -1,10 +1,5 @@
+import { ThemeProvider } from 'styled-components'
+import { withThemes } from '@react-theming/storybook-addon'
+import { defaultTheme } from '../src/theme'
 
-export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
-  controls: {
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/,
-    },
-  },
-}
+export const decorators = [withThemes(ThemeProvider, [defaultTheme])]

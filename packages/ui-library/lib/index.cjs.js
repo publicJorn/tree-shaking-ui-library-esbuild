@@ -21,43 +21,60 @@ var __toModule = (module2) => {
   return __reExport(__markAsModule(__defProp(module2 != null ? __create(__getProtoOf(module2)) : {}, "default", module2 && module2.__esModule && "default" in module2 ? {get: () => module2.default, enumerable: true} : {value: module2, enumerable: true})), module2);
 };
 
-// components/index.js
+// src/index.js
 __markAsModule(exports);
 __export(exports, {
   Button: () => Button_default,
-  Link: () => Link_default
+  Link: () => Link_default,
+  defaultTheme: () => default_default
 });
 
-// components/Button/index.js
-var import_react = __toModule(require("react"));
+// build/global-inject.js
+var React = __toModule(require("react"));
+
+// src/components/Button/index.jsx
+var import_prop_types = __toModule(require("prop-types"));
 var import_styled_components = __toModule(require("styled-components"));
+var getColor = (p) => {
+  switch (p.variant) {
+    case "secondary":
+      return p.theme.colorSecondary;
+    case "primary":
+    default:
+      return p.theme.colorPrimary;
+  }
+};
 var StyledButton = import_styled_components.default.button`
   padding: 1rem;
   border: none;
   border-radius: 5px;
-
-  ${(p) => {
-  switch (p.variant) {
-    case "secondary":
-      return "background-color: #ccc;";
-    default:
-      return "background-color: lime;";
-  }
-}}
+  background-color: ${(p) => getColor(p)};
 `;
-var Button = ({children, ...props}) => /* @__PURE__ */ import_react.default.createElement(StyledButton, {
+var Button = ({children, ...props}) => /* @__PURE__ */ React.createElement(StyledButton, {
   ...props
-}, "I SHOULD BE HERE");
+}, "I SHOULD BE IN APP - ", children);
+Button.propTypes = {
+  variant: (0, import_prop_types.oneOf)(["", "primary", "secondary"])
+};
+Button.defaultProps = {
+  variant: ""
+};
 var Button_default = Button;
 
-// components/Link/index.js
-var import_react2 = __toModule(require("react"));
+// src/components/Link/index.jsx
 var import_styled_components2 = __toModule(require("styled-components"));
 var StyledA = import_styled_components2.default.a`
   font-family: 'Courier New', Courier, monospace;
-  color: #306eff;
+  color: ${(p) => p.theme.colorLink};
 `;
-var Link = ({children, ...props}) => /* @__PURE__ */ import_react2.default.createElement(StyledA, {
+var Link = ({children, ...props}) => /* @__PURE__ */ React.createElement(StyledA, {
   ...props
-}, "I MUST NOT BE HERE");
+}, "I MUST NOT BE IN APP - ", children);
 var Link_default = Link;
+
+// src/theme/default.js
+var default_default = {
+  colorPrimary: "lime",
+  colorSecondary: "#ccc",
+  colorLink: "#306eff"
+};
