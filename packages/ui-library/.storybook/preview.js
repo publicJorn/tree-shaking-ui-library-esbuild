@@ -1,5 +1,16 @@
 import { ThemeProvider } from 'styled-components'
-import { withThemes } from '@react-theming/storybook-addon'
-import { defaultTheme } from '../src/theme'
+import { withThemesProvider } from 'storybook-addon-styled-component-theme'
+import { defaultTheme, darkTheme } from '../src/theme'
+import GlobalStyles from '../src/components/GlobalStyles'
 
-export const decorators = [withThemes(ThemeProvider, [defaultTheme])]
+const themes = [defaultTheme, darkTheme]
+
+export const decorators = [
+  (Story) => (
+    <>
+      <GlobalStyles />
+      <Story />
+    </>
+  ),
+  withThemesProvider(themes, ThemeProvider),
+]

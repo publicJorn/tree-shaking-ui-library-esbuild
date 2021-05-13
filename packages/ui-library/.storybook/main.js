@@ -3,11 +3,11 @@ module.exports = {
     opts.plugins.push(['@babel/plugin-proposal-private-property-in-object', { loose: true }])
     return { ...opts }
   },
-  stories: ['../src/stories/**/*.stories.mdx', '../src/components/**/*.stories.@(js|jsx|ts|tsx)'],
+  stories: ['../docs/**/*.stories.mdx', '../src/components/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
-    '@react-theming/storybook-addon',
+    'storybook-addon-styled-component-theme/dist/preset',
     '@storybook/addon-docs',
     '@storybook/addon-controls',
-    // '@storybook/addon-links',
+    '@storybook/addon-links',
   ],
 }
