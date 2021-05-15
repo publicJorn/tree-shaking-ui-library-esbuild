@@ -1720,24 +1720,6 @@
     util-deprecate "^1.0.2"
     uuid-browser "^3.1.0"
 
-"@storybook/addon-backgrounds@6.2.9":
-  version "6.2.9"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-backgrounds/-/addon-backgrounds-6.2.9.tgz#4f75aa58b262f461d9f8713d65d11407f4e53537"
-  integrity sha512-oPSdeoUuvaXshY5sQRagbYXpr6ZEVUuLhGYBnZTlvm19QMeNCXQE+rdlgzcgyafq4mc1FI/udE2MpJ1dhfS6pQ==
-  dependencies:
-    "@storybook/addons" "6.2.9"
-    "@storybook/api" "6.2.9"
-    "@storybook/client-logger" "6.2.9"
-    "@storybook/components" "6.2.9"
-    "@storybook/core-events" "6.2.9"
-    "@storybook/theming" "6.2.9"
-    core-js "^3.8.2"
-    global "^4.4.0"
-    memoizerific "^1.11.3"
-    regenerator-runtime "^0.13.7"
-    ts-dedent "^2.0.0"
-    util-deprecate "^1.0.2"
-
 "@storybook/addon-controls@6.2.9":
   version "6.2.9"
   resolved "https://registry.yarnpkg.com/@storybook/addon-controls/-/addon-controls-6.2.9.tgz#eeec14b2946f1fb5326115f2205ed72c7f44ccea"
@@ -1800,24 +1782,6 @@
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-essentials@6.2.9":
-  version "6.2.9"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-essentials/-/addon-essentials-6.2.9.tgz#cd946b024804c4d9bfec4e232b74ffdf936b25ef"
-  integrity sha512-zXsV4e1TCkHyDwi7hew4h9eJfDW++f2BNKzTif+DAcjPUVFDp7yC17gLjS5IhOjcQk+db0UUlFSx/OrTxhy7Xw==
-  dependencies:
-    "@storybook/addon-actions" "6.2.9"
-    "@storybook/addon-backgrounds" "6.2.9"
-    "@storybook/addon-controls" "6.2.9"
-    "@storybook/addon-docs" "6.2.9"
-    "@storybook/addon-toolbars" "6.2.9"
-    "@storybook/addon-viewport" "6.2.9"
-    "@storybook/addons" "6.2.9"
-    "@storybook/api" "6.2.9"
-    "@storybook/node-logger" "6.2.9"
-    core-js "^3.8.2"
-    regenerator-runtime "^0.13.7"
-    ts-dedent "^2.0.0"
-
 "@storybook/addon-links@6.2.9":
   version "6.2.9"
   resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-6.2.9.tgz#3399d14b0fc587bccdaa602f6294bc8b249c09f0"
@@ -1835,34 +1799,6 @@
     qs "^6.10.0"
     regenerator-runtime "^0.13.7"
     ts-dedent "^2.0.0"
-
-"@storybook/addon-toolbars@6.2.9":
-  version "6.2.9"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-toolbars/-/addon-toolbars-6.2.9.tgz#29f2f4cba0bfbcff9424958eb573e537f7e2d5af"
-  integrity sha512-4WjIofN5npBPNZ8v1UhzPeATB9RnAWRH/y1AVS1HB+zl6Ku92o7aOMqVxs8zR1oSSmtkHh/rcUcpATFKjuofdw==
-  dependencies:
-    "@storybook/addons" "6.2.9"
-    "@storybook/api" "6.2.9"
-    "@storybook/client-api" "6.2.9"
-    "@storybook/components" "6.2.9"
-    core-js "^3.8.2"
-
-"@storybook/addon-viewport@6.2.9":
-  version "6.2.9"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-viewport/-/addon-viewport-6.2.9.tgz#e380de567cea6c24c4e933efa009e80428d5b49e"
-  integrity sha512-IK2mu5njmfcAT967SJtBOY2B6NPMikySZga9QuaLdSpQxPd3vXKNMVG1CjnduMLeDaAoUlvlJISeEPbYGuE+1A==
-  dependencies:
-    "@storybook/addons" "6.2.9"
-    "@storybook/api" "6.2.9"
-    "@storybook/client-logger" "6.2.9"
-    "@storybook/components" "6.2.9"
-    "@storybook/core-events" "6.2.9"
-    "@storybook/theming" "6.2.9"
-    core-js "^3.8.2"
-    global "^4.4.0"
-    memoizerific "^1.11.3"
-    prop-types "^15.7.2"
-    regenerator-runtime "^0.13.7"
 
 "@storybook/addons@6.2.9":
   version "6.2.9"

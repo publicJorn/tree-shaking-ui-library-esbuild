@@ -1,0 +1,32 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import iconSizes from './icon-sizes.png';
+
+<Meta title="Guidelines/Icons" />
+
+# Icons
+
+## Remix
+We use the [Remix icon library](https://remixicon.com). All of the icons are free for both 
+personal and commercial use. 
+
+## Sizes
+We use icons in four sizes. Be sure the icon size is consistent throughout your product.
+
+<img src={iconSizes} />
+
+## Touch targets
+Interactive icons should have a touch target of 44px or larger. Padding can be added around 
+an icon to meet the 44px requirement.
+
+> **Note:** for accessibility, it is good practice using a descriptive label next to an icon. 
+Relying on an icon alone can be hard to understand for particular groups of people.
+
+## Accessibility
+For screen reader accessibility, provide a context-rich title for the SVG using `<title>` element.
+If support for older browsers is required, use the `aria-labelledby` attribute to reference 
+the `<title>` element using a unique id. The `<title>` element will be read by the screen reader 
+to the user, so it should describe its purpose.
+
+## Further reading
+
+* [Accessible SVGs](https://css-tricks.com/accessible-svgs/)

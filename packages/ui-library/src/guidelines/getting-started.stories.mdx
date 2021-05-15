@@ -1,0 +1,112 @@
+<Meta title="Getting Started" />
+
+# Getting started
+
+The [Common Ground (CG) Design System](https://gitlab.com/commonground/core/design-system) is a reusable component library that helps CG projects build UIs faster. The goal is to make building durable UIs more productive and satisfying.
+
+## Installation
+
+The components are written in React. The code examples are mostly JSX.
+
+Add the Design System and the font to your project.
+
+`npm install --save @commonground/design-system @fontsource/source-sans-pro`
+
+Install the peer dependencies if you don't have these installed already.
+
+`npm install --save formik react react-dom styled-components`
+
+### Content Security Policy (CSP) settings
+
+Some of the components load images via the data scheme (eg. base64 encoded images). Because of this, you might need to
+loosen your application's CSP settings.
+
+To enable loading images via the data scheme for the `image-src` directive, use `img-src 'self' data:;`.
+
+## Usage
+
+The `GlobalStyles` component needs to be included once. It contains the foundation (eg. normalize.css, typography...) which other components rely on.  
+Also make sure to add the font source.
+
+```
+import { ThemeProvider } from 'styled-components'
+import { GlobalStyles, defaultTheme } from '@commonground/design-system'
+import '@fontsource/source-sans-pro/latin.css'
+```
+
+and in your App
+
+```
+  const App = () => {
+    <div>
+      <ThemeProvider theme={defaultTheme}>
+        <GlobalStyles />
+        <p>Welcome to my App!</p>
+      </ThemeProvider>
+    <div>
+  }
+```
+
+Import components you want into your UI
+
+`import { Button } from ‘@commonground/design-system’;`
+
+and use them like so
+
+```
+  const example = () => (
+    <div>
+      <Button variant="primary">Do something</Button>
+    </div>
+  )
+```
+
+## Customizing the theme
+
+The Design System is build using design tokens. If you want to customize the theme, you can do so by overriding some of the tokens.
+
+Lets say you want your webapp to have a green background.
+We would have to update the token `backgroundColor` to achieve this.
+Let's set it to to green (#00FF00).
+
+### **theme.js**
+
+```
+import { defaultTheme } from '@commonground/design-system'
+
+const tokens = {
+  ...defaultTheme.tokens,
+}
+
+const theme = {
+  ...defaultTheme,
+
+  tokens,
+
+  // Generics
+  colorBackground: '#00FF00',
+}
+
+export default theme
+```
+
+### **app.js**
+
+```
+import myCustomTheme from './theme.js'
+
+const App = () => {
+    <div>
+      <ThemeProvider theme={myCustomTheme}>
+        <GlobalStyles />
+        <p>Welcome to my customised App!</p>
+      </ThemeProvider>
+    <div>
+  }
+```
+
+## Used by
+
+- [NLX](https://nlx.io/)
+- [developer.overheid.nl](https://developer.overheid.nl/)
+- [Appstore](https://appstore.commonground.nl/)
