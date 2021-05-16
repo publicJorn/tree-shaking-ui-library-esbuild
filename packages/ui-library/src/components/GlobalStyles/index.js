@@ -10,7 +10,10 @@ export default createGlobalStyle`
   ${normalize}
 
   html {
-    background-color: ${(p) => p.theme.tokens.colorBackground};
+    background-color: ${(p) => {
+      console.log(p)
+      return p.theme.tokens.colorBackground
+    }};
     color: ${(p) => p.theme.colorText};
     font-family: 'Source Sans Pro', sans-serif;
     font-size: ${(p) => p.theme.tokens.baseFontSize};

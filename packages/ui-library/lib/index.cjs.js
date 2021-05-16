@@ -140,7 +140,10 @@ var GlobalStyles_default = import_styled_components3.createGlobalStyle`
   ${import_styled_normalize.normalize}
 
   html {
-    background-color: ${(p) => p.theme.tokens.colorBackground};
+    background-color: ${(p) => {
+  console.log(p);
+  return p.theme.tokens.colorBackground;
+}};
     color: ${(p) => p.theme.colorText};
     font-family: 'Source Sans Pro', sans-serif;
     font-size: ${(p) => p.theme.tokens.baseFontSize};
@@ -226,9 +229,9 @@ var StyledA = import_styled_components4.default.a`
   font-family: 'Courier New', Courier, monospace;
   color: ${(p) => p.theme.colorLink};
 `;
-var Link = ({children, ...props}) => /* @__PURE__ */ React.createElement(StyledA, {
+var Link = ({children, ...props}) => /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(StyledA, {
   ...props
-}, "I MUST NOT BE IN APP - ", children);
+}, "I MUST NOT BE IN APP - ", children));
 var Link_default = Link;
 
 // src/theme/index.js

@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`exposed design system parts 1`] = `
+Array [
+  "default",
+  "Button",
+  "GlobalStyles",
+  "Link",
+  "darkTheme",
+  "defaultTheme",
+]
+`;

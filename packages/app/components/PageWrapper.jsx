@@ -3,7 +3,7 @@ import { defaultTheme, GlobalStyles } from 'ui-library'
 
 const PageWrapper = ({ children }) => (
   <ThemeProvider theme={defaultTheme}>
-    <GlobalStyles />
+    <GlobalStyles p={defaultTheme} />
     {children}
   </ThemeProvider>
 )
