@@ -1,3 +1,6 @@
+// Copyright © VNG Realisatie 2021
+// Licensed under the EUPL
+//
 import styled from 'styled-components'
 
 const StyledA = styled.a`
@@ -5,6 +8,8 @@ const StyledA = styled.a`
   color: ${(p) => p.theme.colorLink};
 `
 
-const Link = ({ children, ...props }) => <StyledA {...props}>I MUST NOT BE IN APP - {children}</StyledA>
+const Link = ({ children, ...props }) => (
+  <StyledA {...props}>I MUST NOT BE IN APP - {children}</StyledA>
+)
 
 export default Link

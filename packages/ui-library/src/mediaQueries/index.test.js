@@ -36,7 +36,9 @@ describe('Given theme/helpers/mediaQueries', () => {
     })
 
     it("Should return expected query for only('xs')", () => {
-      expect(only('xs')).toEqual('@media (min-width: 0px) and (max-width: 575.95px)')
+      expect(only('xs')).toEqual(
+        '@media (min-width: 0px) and (max-width: 575.95px)',
+      )
     })
 
     it("Should return expected query for up('xs')", () => {
@@ -48,7 +50,9 @@ describe('Given theme/helpers/mediaQueries', () => {
     })
 
     it("Should return expected query for only('sm')", () => {
-      expect(only('sm')).toEqual('@media (min-width: 576px) and (max-width: 767.95px)')
+      expect(only('sm')).toEqual(
+        '@media (min-width: 576px) and (max-width: 767.95px)',
+      )
     })
 
     it("Should return expected query for up('sm')", () => {
@@ -57,7 +61,9 @@ describe('Given theme/helpers/mediaQueries', () => {
 
     it("Should return expected query for only('md')", () => {
       // Note: this uses `${step} / 100`
-      expect(only('md')).toEqual('@media (min-width: 768px) and (max-width: 991.95px)')
+      expect(only('md')).toEqual(
+        '@media (min-width: 768px) and (max-width: 991.95px)',
+      )
     })
 
     it("Should return expected query for down('lg')", () => {
@@ -85,7 +91,9 @@ describe('Given theme/helpers/mediaQueries', () => {
       const result = media.md`color: red;`
       const query = result[1]
 
-      expect(query).toEqual('@media (min-width: 768px) and (max-width: 991.95px)')
+      expect(query).toEqual(
+        '@media (min-width: 768px) and (max-width: 991.95px)',
+      )
     })
 
     it('Should return the expected media query for `lg`', () => {

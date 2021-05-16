@@ -1,3 +1,6 @@
+// Copyright © VNG Realisatie 2020
+// Licensed under the EUPL
+//
 const esbuild = require('esbuild')
 const pkg = require('./package.json')
 

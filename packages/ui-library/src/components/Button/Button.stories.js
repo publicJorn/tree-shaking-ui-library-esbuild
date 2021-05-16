@@ -1,3 +1,6 @@
+// Copyright © VNG Realisatie 2021
+// Licensed under the EUPL
+//
 import React from 'react'
 import Button from './index'
 

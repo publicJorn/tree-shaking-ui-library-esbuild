@@ -29,7 +29,8 @@ export const Default = () => (
 
     <p>
       <Icon as={IconCheck} />
-      With <code>{`<Icon />`}</code>, which ensures the icon size will be correct.
+      With <code>{`<Icon />`}</code>, which ensures the icon size will be
+      correct.
     </p>
   </>
 )
@@ -42,11 +43,12 @@ export const InlineIcon = () => (
     </p>
 
     <p>
-      <Icon as={IconCheck} inline /> A longer paragraph with an inline icon. Building mr concerns
-      servants in he outlived am breeding. He so lain good miss when sell some at if. Told hand so
-      an rich gave next. How doubt yet again see son smart. While mirth large of on front. Ye he
-      greater related adapted proceed entered an. Through it examine express promise no. Past add
-      size game cold girl off how old.
+      <Icon as={IconCheck} inline /> A longer paragraph with an inline icon.
+      Building mr concerns servants in he outlived am breeding. He so lain good
+      miss when sell some at if. Told hand so an rich gave next. How doubt yet
+      again see son smart. While mirth large of on front. Ye he greater related
+      adapted proceed entered an. Through it examine express promise no. Past
+      add size game cold girl off how old.
     </p>
   </>
 )

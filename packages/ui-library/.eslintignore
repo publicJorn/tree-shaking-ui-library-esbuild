@@ -1,0 +1,4 @@
+.next/
+*.svg
+lib/*
+build/
