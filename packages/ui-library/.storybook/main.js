@@ -29,9 +29,9 @@ module.exports = {
   ],
 
   addons: [
-    'storybook-addon-styled-component-theme/dist/preset',
     '@storybook/addon-docs',
     '@storybook/addon-controls',
     '@storybook/addon-links',
+    'storybook-addon-themes',
   ],
 }

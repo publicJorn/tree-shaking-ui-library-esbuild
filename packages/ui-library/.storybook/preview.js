@@ -1,16 +1,29 @@
+import { addDecorator } from '@storybook/react'
 import { ThemeProvider } from 'styled-components'
-import { withThemesProvider } from 'storybook-addon-styled-component-theme'
+import { withThemes } from 'storybook-addon-themes/react'
 import { defaultTheme, darkTheme } from '../src/theme'
 import GlobalStyles from '../src/components/GlobalStyles'
 
-const themes = [defaultTheme, darkTheme]
+addDecorator(withThemes)
 
-export const decorators = [
-  (Story) => (
-    <>
+const Decorator = ({ themes, themeName, children }) => {
+  const theme = themes.find((t) => t.name === themeName)
+  return (
+    <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <Story />
-    </>
-  ),
-  withThemesProvider(themes, ThemeProvider),
-]
+      {children}
+    </ThemeProvider>
+  )
+}
+
+export const parameters = {
+  themes: {
+    default: 'default',
+    list: [
+      { ...defaultTheme, color: defaultTheme.tokens.colorBackground },
+      { ...darkTheme, color: darkTheme.tokens.colorBackground }
+    ],
+    clearable: false,
+    Decorator,
+  }
+}
