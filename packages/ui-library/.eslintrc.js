@@ -3,7 +3,11 @@
 //
 module.exports = {
   plugins: ['react'],
-  extends: ['plugin:react/recommended', '@commonground/eslint-config'],
+  extends: [
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
+    '@commonground/eslint-config',
+  ],
   settings: {
     react: {
       version: 'detect',
