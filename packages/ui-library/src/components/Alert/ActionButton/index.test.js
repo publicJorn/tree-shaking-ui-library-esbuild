@@ -6,7 +6,7 @@ import React from 'react'
 import { render, act, fireEvent } from '@testing-library/react'
 import { MemoryRouter, Link } from 'react-router-dom'
 
-import TestThemeProvider from '../../../themes/TestThemeProvider'
+import TestThemeProvider from '../../../theme/TestThemeProvider'
 import ActionButton from './index'
 
 test('LinkAction for React Router links', () => {

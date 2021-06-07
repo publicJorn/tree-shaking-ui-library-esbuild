@@ -11,6 +11,14 @@ const alertStory = {
   title: 'Components/Alert',
   parameters: {
     componentSubtitle: 'Localised notifications',
+    controls: {
+      sort: 'alpha',
+    },
+  },
+  argTypes: {
+    actions: {
+      control: false,
+    },
   },
   component: Alert,
 }
@@ -37,29 +45,18 @@ export const allAlerts = () => (
   </>
 )
 
-export const info = () => (
-  <Alert variant="info" title="Title">
-    Content
-  </Alert>
-)
-
-export const success = () => (
-  <Alert variant="success" title="Title">
-    Content
-  </Alert>
-)
-
-export const warning = () => (
-  <Alert variant="warning" title="Title">
-    Content
-  </Alert>
-)
-
-export const error = () => (
-  <Alert variant="error" title="Title">
-    Content
-  </Alert>
-)
+export const editValues = (props) => <Alert {...props} />
+editValues.args = {
+  title: 'Title',
+  children: 'Content',
+}
+editValues.argTypes = {
+  variant: {
+    control: {
+      type: 'select',
+    },
+  },
+}
 
 export const withActions = () => {
   const handleOnClick = () =>
