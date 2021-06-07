@@ -4,7 +4,7 @@
 
 import React from 'react'
 import { render } from '@testing-library/react'
-import TestThemeProvider from '../../themes/TestThemeProvider'
+import TestThemeProvider from '../../theme/TestThemeProvider'
 import Spinner from './index'
 
 test('renders without crashing', () => {

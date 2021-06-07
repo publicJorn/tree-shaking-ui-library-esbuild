@@ -9,7 +9,7 @@ import {
   act,
 } from '@testing-library/react'
 
-import TestThemeProvider from '../../themes/TestThemeProvider'
+import TestThemeProvider from '../../theme/TestThemeProvider'
 import { ToasterProvider, ToasterContext, Toast } from './index'
 
 const reactRoot = document.createElement('div')

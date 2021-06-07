@@ -7,7 +7,7 @@ const debounce = (cb, delay = 150) => {
     clearTimeout(timeoutId)
     timeoutId = setTimeout(() => {
       timeoutId = null
-      cb.call(this, ...args)
+      cb.call(debounce, ...args)
     }, delay)
   }
 }

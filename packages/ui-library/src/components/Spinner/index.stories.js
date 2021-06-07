@@ -8,9 +8,6 @@ const spinnerStory = {
   title: 'Components/Spinner',
   parameters: {
     componentSubtitle: 'Loader icon',
-    controls: {
-      hideNoControlsWarning: true,
-    },
   },
   component: Spinner,
 }

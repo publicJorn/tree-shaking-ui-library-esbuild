@@ -11,9 +11,6 @@ const toasterStory = {
   title: 'Components/Toaster',
   parameters: {
     componentSubtitle: 'Global notifications',
-    controls: {
-      hideNoControlsWarning: true,
-    },
   },
   component: ToasterProvider,
 }
