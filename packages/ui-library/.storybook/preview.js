@@ -25,5 +25,9 @@ export const parameters = {
     ],
     clearable: false,
     Decorator,
+  },
+  controls: {
+    expanded: true,
+    hideNoControlsWarning: true,
   }
 }
