@@ -5,6 +5,7 @@
   "scripts": {
     "start": "next dev",
     "build": "next build",
+    "build:analyze": "ANALYZE=true next build",
     "serve": "next start"
   },
   "dependencies": {
@@ -15,6 +16,7 @@
     "styled-components": "5.2.3"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "10.2.3",
     "babel-plugin-styled-components": "1.12.0"
   }
 }

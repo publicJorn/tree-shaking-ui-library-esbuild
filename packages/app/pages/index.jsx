@@ -1,16 +1,18 @@
-import React, { useContext } from 'react'
-import { Button, ToasterProvider, ToasterContext } from 'ui-library'
-import PageWrapper from '../components/PageWrapper'
+import React from 'react'
+import { Button } from 'ui-library'
+// import { Button, ToasterProvider, ToasterContext } from 'ui-library'
+// import PageWrapper from '../components/PageWrapper'
 
 const Content = () => {
-  const { showToast } = useContext(ToasterContext)
+  // const { showToast } = useContext(ToasterContext)
 
   const handleClick = () => {
-    showToast({
-      title: 'Clicked!',
-      body: 'You did well, padawan...',
-      variant: 'success',
-    })
+    // showToast({
+    //   title: 'Clicked!',
+    //   body: 'You did well, padawan...',
+    //   variant: 'success',
+    // })
+    console.log('clicked button!')
   }
 
   return (
@@ -21,12 +23,13 @@ const Content = () => {
   )
 }
 
-const Home = () => (
-  <PageWrapper>
-    <ToasterProvider rootSelector="#__next">
-      <Content />
-    </ToasterProvider>
-  </PageWrapper>
-)
+const Home = () => <Content />
+// const Home = () => (
+//   <PageWrapper>
+//     <ToasterProvider rootSelector="#__next">
+//       <Content />
+//     </ToasterProvider>
+//   </PageWrapper>
+// )
 
 export default Home
