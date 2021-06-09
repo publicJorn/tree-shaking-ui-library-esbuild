@@ -13,6 +13,7 @@ import ActionButton from './ActionButton'
  *
  * For global feedback, you may want to use a `Toaster`.
  */
+/* @__PURE__ */
 const Alert = ({ title, children, actions, ...props }) => (
   <Container role="alert" {...props}>
     {title && title.length > 1 ? (

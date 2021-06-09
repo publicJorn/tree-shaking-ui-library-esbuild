@@ -1,7 +1,7 @@
 // Copyright © VNG Realisatie 2021
 // Licensed under the EUPL
 //
-import { oneOf } from 'prop-types'
+import { node, oneOf } from 'prop-types'
 import styled from 'styled-components'
 
 const getColor = (p) => {
@@ -22,11 +22,13 @@ const StyledButton = styled.button`
   background-color: ${(p) => getColor(p)};
 `
 
+/* @__PURE__ */
 const Button = ({ children, ...props }) => (
   <StyledButton {...props}>I SHOULD BE IN APP - {children}</StyledButton>
 )
 
 Button.propTypes = {
+  children: node,
   variant: oneOf(['', 'primary', 'secondary']),
 }
 

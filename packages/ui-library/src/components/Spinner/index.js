@@ -5,6 +5,7 @@
 import React from 'react'
 import { StyledSvg } from './index.styles'
 
+/* @__PURE__ */
 const Spinner = ({ ...props }) => (
   <StyledSvg viewBox="0 0 24 24" title="I MUST NOT BE HERE" {...props}>
     <path fill="none" d="M0 0h24v24H0z" />

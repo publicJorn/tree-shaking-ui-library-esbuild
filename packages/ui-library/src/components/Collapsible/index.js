@@ -14,6 +14,7 @@ import {
 
 const createRandomId = () => `r${Math.random().toString(36).slice(8)}`
 
+/* @__PURE__ */
 const Collapsible = ({
   title,
   ariaLabel,

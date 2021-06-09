@@ -15,15 +15,15 @@ export { default as Collapsible } from './components/Collapsible'
 //   StackedDrawer,
 //   MockDrawerStack,
 // } from './components/Drawer'
-// export { default as GlobalStyles } from './components/GlobalStyles'
 export { default as GitLabLogo } from './components/GitLabLogo'
+// export { default as GlobalStyles } from './components/GlobalStyles'
+// export { default as Icon } from './components/Icon'
+// export { default as IconFlippingChevron } from './components/IconFlippingChevron'
+export { default as Link } from './components/Link'
 export { default as NLXLogo } from './components/NLXLogo'
 // export {
 //   default as PrimaryNavigation,
 //   mobileNavigationHeight,
 // } from './components/PrimaryNavigation'
-// export { default as Icon } from './components/Icon'
-// export { default as IconFlippingChevron } from './components/IconFlippingChevron'
-export { default as Link } from './components/Link'
 export { default as Spinner } from './components/Spinner'
 // export { ToasterProvider, ToasterContext, Toast } from './components/Toaster'

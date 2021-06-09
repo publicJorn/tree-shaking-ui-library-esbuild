@@ -961,6 +961,7 @@ var Button = ({children, ...props}) => /* @__PURE__ */ React.createElement(Style
   ...props
 }, "I SHOULD BE IN APP - ", children);
 Button.propTypes = {
+  children: import_prop_types.node,
   variant: (0, import_prop_types.oneOf)(["", "primary", "secondary"])
 };
 Button.defaultProps = {
@@ -1307,10 +1308,26 @@ var GitLabLogo = ({...props}) => /* @__PURE__ */ import_react6.default.createEle
 })));
 var GitLabLogo_default = GitLabLogo;
 
+// src/components/Link/index.jsx
+init_global_inject();
+var import_prop_types6 = __toModule(require("prop-types"));
+var import_styled_components10 = __toModule(require("styled-components"));
+var StyledA = import_styled_components10.default.a`
+  font-family: 'Courier New', Courier, monospace;
+  color: ${(p) => p.theme.colorLink};
+`;
+var Link = ({children, ...props}) => /* @__PURE__ */ React.createElement(StyledA, {
+  ...props
+}, "I MUST NOT BE IN APP - ", children);
+Link.propTypes = {
+  children: import_prop_types6.node
+};
+var Link_default = Link;
+
 // src/components/NLXLogo/index.js
 init_global_inject();
 var import_react7 = __toModule(require("react"));
-var import_prop_types6 = __toModule(require("prop-types"));
+var import_prop_types7 = __toModule(require("prop-types"));
 var NLXLogo = ({onDark, ...props}) => {
   const color = onDark === true ? "#ffffff" : "#6C757D";
   return /* @__PURE__ */ import_react7.default.createElement("svg", {
@@ -1329,24 +1346,12 @@ var NLXLogo = ({onDark, ...props}) => {
   })));
 };
 NLXLogo.propTypes = {
-  onDark: import_prop_types6.bool
+  onDark: import_prop_types7.bool
 };
 NLXLogo.defaultProps = {
   onDark: false
 };
 var NLXLogo_default = NLXLogo;
-
-// src/components/Link/index.jsx
-init_global_inject();
-var import_styled_components10 = __toModule(require("styled-components"));
-var StyledA = import_styled_components10.default.a`
-  font-family: 'Courier New', Courier, monospace;
-  color: ${(p) => p.theme.colorLink};
-`;
-var Link = ({children, ...props}) => /* @__PURE__ */ React.createElement(StyledA, {
-  ...props
-}, "I MUST NOT BE IN APP - ", children);
-var Link_default = Link;
 
 // src/components/Spinner/index.js
 init_global_inject();

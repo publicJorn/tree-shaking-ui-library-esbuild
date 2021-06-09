@@ -909,7 +909,7 @@ var mediaQueries_default = mediaQueries;
 // src/components/Alert/index.js
 init_global_inject();
 import React3 from "react";
-import {arrayOf, node, oneOf as oneOf2, string} from "prop-types";
+import {arrayOf, node as node2, oneOf as oneOf2, string} from "prop-types";
 
 // src/components/Alert/propTypeAction.js
 init_global_inject();
@@ -921,7 +921,7 @@ import {func} from "prop-types";
 
 // src/components/Button/index.jsx
 init_global_inject();
-import {oneOf} from "prop-types";
+import {node, oneOf} from "prop-types";
 import styled from "styled-components";
 var getColor = (p) => {
   switch (p.variant) {
@@ -942,6 +942,7 @@ var Button = ({children, ...props}) => /* @__PURE__ */ React.createElement(Style
   ...props
 }, "I SHOULD BE IN APP - ", children);
 Button.propTypes = {
+  children: node,
   variant: oneOf(["", "primary", "secondary"])
 };
 Button.defaultProps = {
@@ -1086,7 +1087,7 @@ var Alert = ({title, children, actions, ...props}) => /* @__PURE__ */ React3.cre
   "data-testid": "content"
 }, children), actions.length ? /* @__PURE__ */ React3.createElement(Actions, null, actions) : null);
 Alert.propTypes = {
-  children: node,
+  children: node2,
   title: string,
   variant: oneOf2(["info", "warning", "success", "error"]),
   actions: arrayOf(propTypeAction_default)
@@ -1129,7 +1130,7 @@ var CGLogo_default = CGLogo;
 init_global_inject();
 var import_react_collapse = __toModule(require_lib());
 import React6, {useState, useEffect, useCallback} from "react";
-import {node as node2, bool as bool2, func as func2} from "prop-types";
+import {node as node3, bool as bool2, func as func2} from "prop-types";
 
 // src/components/Collapsible/index.styles.js
 init_global_inject();
@@ -1231,7 +1232,7 @@ var Collapsible = ({
   }, children)));
 };
 Collapsible.propTypes = {
-  title: node2.isRequired,
+  title: node3.isRequired,
   ariaLabel: (props) => {
     if (typeof props.title !== "string" && !props.ariaLabel) {
       return new Error("If Collapsible title is not a string, please provide an ariaLabel");
@@ -1240,7 +1241,7 @@ Collapsible.propTypes = {
   initiallyOpen: bool2,
   animate: bool2,
   onToggle: func2,
-  children: node2.isRequired
+  children: node3.isRequired
 };
 var noop = (isOpen) => {
 };
@@ -1288,6 +1289,22 @@ var GitLabLogo = ({...props}) => /* @__PURE__ */ React7.createElement("svg", {
 })));
 var GitLabLogo_default = GitLabLogo;
 
+// src/components/Link/index.jsx
+init_global_inject();
+import {node as node4} from "prop-types";
+import styled5 from "styled-components";
+var StyledA = styled5.a`
+  font-family: 'Courier New', Courier, monospace;
+  color: ${(p) => p.theme.colorLink};
+`;
+var Link = ({children, ...props}) => /* @__PURE__ */ React.createElement(StyledA, {
+  ...props
+}, "I MUST NOT BE IN APP - ", children);
+Link.propTypes = {
+  children: node4
+};
+var Link_default = Link;
+
 // src/components/NLXLogo/index.js
 init_global_inject();
 import React8 from "react";
@@ -1316,18 +1333,6 @@ NLXLogo.defaultProps = {
   onDark: false
 };
 var NLXLogo_default = NLXLogo;
-
-// src/components/Link/index.jsx
-init_global_inject();
-import styled5 from "styled-components";
-var StyledA = styled5.a`
-  font-family: 'Courier New', Courier, monospace;
-  color: ${(p) => p.theme.colorLink};
-`;
-var Link = ({children, ...props}) => /* @__PURE__ */ React.createElement(StyledA, {
-  ...props
-}, "I MUST NOT BE IN APP - ", children);
-var Link_default = Link;
 
 // src/components/Spinner/index.js
 init_global_inject();

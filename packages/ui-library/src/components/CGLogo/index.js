@@ -3,9 +3,7 @@
 //
 import React from 'react'
 
-/**
- * Reusable logo which can be used across the Common Ground projects.
- */
+/* @__PURE__ */
 const CGLogo = ({ ...props }) => (
   <svg
     viewBox="0 0 282 282"
